@@ -16,3 +16,17 @@
 1588425799685:upload D:\\Documenten test.txt
 1588425809517:stacktrace
 1588425884835:upload D:\\Documenten\\test.txt
+1590324965651:welcome
+1590325062419:upload
+1590325141262:upload --path \\Sketchpad.png
+1590326433227:welcome
+1590326438089:help
+1590326447142:read words
+1590326458511:read words --file basiswoorden.txt
+1590327353649:read word --file basiswoorden.txt
+1590327504233:read words --file basiswoorden.txt
+1590327657829:read words -- file basiswoorden.txt
+1590327671995:read words --file basiswoorden.txt
+1590331399596:read --file basiswoorden.txt
+1590332171884:read --file basiswoorden.tzt
+1590332179452:read --file basiswoorden.txt
