@@ -1,6 +1,6 @@
 package com.component;
 
-import com.service.DatabaseService;
+import com.service.WordService;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
@@ -10,7 +10,7 @@ import java.io.*;
 
 @ShellComponent
 public class Commands {
-    private final DatabaseService databaseService;
+    private final WordService wordService;
 
     @ShellMethod("Welcome")
     public String welcome(){
@@ -20,22 +20,20 @@ public class Commands {
     }
 
    @ShellMethod(value ="Read the words from . ", key = "read")
-    public String readWord(@ShellOption(help = "filename to be uploaded") File file) throws IOException {
+    public void readWord(@ShellOption(help = "filename to be uploaded") File file) throws IOException {
         String filepath = file.getCanonicalPath();
 
         try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filepath))){
             String currentLine;
             while((currentLine = bufferedReader.readLine()) != null) {
-                databaseService.addWord(currentLine);//
+                wordService.addWord(currentLine);
+                System.out.println("The following word is added : " + currentLine);
             }
-
-        }catch (IOException e){
-            return e.getMessage();
         }
-        return "The words of file " + file + " have been uploaded in the database";
+
    }
 
-   Commands(DatabaseService databaseService){
-        this.databaseService = databaseService;
+   Commands(WordService wordService){
+        this.wordService = wordService;
    }
 }
