@@ -27,7 +27,6 @@ public class Commands {
             String currentLine;
             while((currentLine = bufferedReader.readLine()) != null) {
                 wordService.addWord(currentLine);
-                System.out.println("The following word is added : " + currentLine);
             }
         }
 
