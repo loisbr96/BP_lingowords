@@ -7,10 +7,13 @@ import org.springframework.shell.standard.ShellOption;
 
 import java.io.*;
 
-
 @ShellComponent
-public class Commands {
+public class CommandComponent {
     private final WordService wordService;
+
+    CommandComponent(WordService wordService){
+        this.wordService = wordService;
+    }
 
     @ShellMethod("Welcome")
     public String welcome(){
@@ -20,7 +23,7 @@ public class Commands {
     }
 
    @ShellMethod(value ="Read the words from . ", key = "read")
-    public void readWord(@ShellOption(help = "filename to be uploaded") File file) throws IOException {
+    public void readFile(@ShellOption(help = "filename to be uploaded") File file) throws IOException {
         String filepath = file.getCanonicalPath();
 
         try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filepath))){
@@ -29,10 +32,5 @@ public class Commands {
                 wordService.addWord(currentLine);
             }
         }
-
-   }
-
-   Commands(WordService wordService){
-        this.wordService = wordService;
    }
 }
