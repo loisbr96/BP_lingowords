@@ -15,6 +15,7 @@ import reactor.core.publisher.Mono;
 import java.io.IOException;
 
 @Service
+@SuppressWarnings("PMD.UselessParentheses")
 public class ApiCallService {
     @Value("${api.url}")
     private String apiUrl;
