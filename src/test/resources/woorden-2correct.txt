@@ -3,4 +3,6 @@ testen
 t3Aste
 laptottop
 la
+tafel
+masters
 

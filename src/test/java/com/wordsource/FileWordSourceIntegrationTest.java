@@ -21,7 +21,7 @@ public class FileWordSourceIntegrationTest {
         List<String> result = wordSource.read();
 
         //assert
-        assertThat(result).contains("laptop", "testen");
+        assertThat(result).contains("laptop", "testen","tafel", "masters");
 
     }
 }
