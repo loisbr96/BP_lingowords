@@ -1,7 +1,6 @@
 package com.wordsource;
 
 import com.service.WordSource;
-import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,13 +9,17 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
 public class FileWordSource implements WordSource {
     private File file;
 
+    public FileWordSource(File file) {
+        this.file = file;
+    }
+
+
     @Override
-    public List<String> read(Object sourceObject) throws Exception {
-        this.file = (File) sourceObject;
+    public List<String> read() throws Exception {
+
         ArrayList<String> words = new ArrayList<>();
 
         String filepath = file.getCanonicalPath();

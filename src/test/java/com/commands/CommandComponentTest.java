@@ -28,21 +28,21 @@
 //        assertThat(shell.evaluate(() -> "welcome")).isEqualTo("welcome");
 //    }
 //
-////    @Test
-////    public void runTest(){
-////
-////        Object result = shell.evaluate(new Input() {
-////            @Override
-////            public String rawText() {
-////                return "Welcome to the LoLingo words application.\n " +
-////                        "What would you like to do?\n" +
-////                        "type the command 'help' for the commands";
-////            }
-////        });
-////
-////        DefaultResultHandler resultHandler = new DefaultResultHandler();
-////        resultHandler.handleResult(result);
-////
-////    }
+//    @Test
+//    public void runTest(){
+//
+//        Object result = shell.evaluate(new Input() {
+//            @Override
+//            public String rawText() {
+//                return "Welcome to the LoLingo words application.\n " +
+//                        "What would you like to do?\n" +
+//                        "type the command 'help' for the commands";
+//            }
+//        });
+//
+//        DefaultResultHandler resultHandler = new DefaultResultHandler();
+//        resultHandler.handleResult(result);
+//
+//    }
 //}
-//TODO: error with starting up the test, it doesnt start but keeps waiting
+//

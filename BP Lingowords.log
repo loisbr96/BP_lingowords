@@ -6,3 +6,6 @@
 1590741195852:welcome
 1590741202382:read --file basiswoorden.txt
 1591877879191:import --file basiswoorden.txt
+1591882314723:help
+1591882320348:welcome
+1591882347378:import --file basiswoorden.txt

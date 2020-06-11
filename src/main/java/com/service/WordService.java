@@ -1,10 +1,12 @@
 package com.service;
 
+import javafx.beans.binding.LongExpression;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,6 +18,9 @@ public class WordService {
 
     WordService(WordTarget wordTarget){
         this.wordTarget = wordTarget;
+    }
+    public void importFromWordSource(WordSource wordSource) throws Exception {
+        wordSource.read().forEach(this::addWord);
     }
 
     public void addWord(String word){

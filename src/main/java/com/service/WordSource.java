@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface WordSource {
 
-    List<String> read(Object sourceObject) throws Exception;
+    List<String> read() throws Exception;
 
 }
