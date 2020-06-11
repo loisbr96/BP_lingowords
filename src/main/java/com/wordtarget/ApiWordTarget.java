@@ -1,5 +1,6 @@
-package com.service;
+package com.wordtarget;
 
+import com.service.WordTarget;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -16,10 +17,10 @@ import java.io.IOException;
 
 @Service
 @SuppressWarnings("PMD.UselessParentheses")
-public class ApiCallService {
+public class ApiWordTarget implements WordTarget {
     @Value("${api.url}")
     private String apiUrl;
-    private static Logger logger = LoggerFactory.getLogger(ApiCallService.class);
+    private static Logger logger = LoggerFactory.getLogger(ApiWordTarget.class);
 
     public Mono<String> create(String word){
 
@@ -28,7 +29,7 @@ public class ApiCallService {
 
             CloseableHttpResponse response = client.execute(httpGet);
             assert (response.getStatusLine().getStatusCode() == 200);
-//            client.close();
+
             return Mono.just(word);
         } catch (IOException e) {
             logger.error(String.format("The API failed, the following error is thrown: %s ", e.getMessage()));
