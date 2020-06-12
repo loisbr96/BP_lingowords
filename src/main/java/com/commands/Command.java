@@ -18,10 +18,9 @@ public class Command {
 
     @ShellMethod(value = "welcome message", key = "welcome")
     public String welcome(){
-        return "hallo";
-//        return "Welcome to the LoLingo words application.\n " +
-//                "What would you like to do?\n" +
-//                "type the command 'help' for the commands";
+        return "Welcome to the LoLingo words application.\n " +
+                "What would you like to do?\n" +
+                "type the command 'help' for the commands";
     }
 
    @ShellMethod(value ="Read the words from . ", key = "import")
