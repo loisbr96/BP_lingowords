@@ -16,11 +16,12 @@ public class Command {
         this.wordService = wordService;
     }
 
-    @ShellMethod(value = "welcome", key = "welcome")
+    @ShellMethod(value = "welcome message", key = "welcome")
     public String welcome(){
-        return "Welcome to the LoLingo words application.\n " +
-                "What would you like to do?\n" +
-                "type the command 'help' for the commands";
+        return "hallo";
+//        return "Welcome to the LoLingo words application.\n " +
+//                "What would you like to do?\n" +
+//                "type the command 'help' for the commands";
     }
 
    @ShellMethod(value ="Read the words from . ", key = "import")

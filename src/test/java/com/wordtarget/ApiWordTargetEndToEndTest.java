@@ -18,22 +18,42 @@ public class ApiWordTargetEndToEndTest {
 
     @Test
     public void createCorrectWord(){
-        this.webTestClient.get().uri("/testen").exchange().expectStatus().isOk();
+        this.webTestClient
+                .get()
+                .uri("/testen")
+                .exchange()
+                .expectStatus()
+                .isOk();
     }
 
     @Test
     public void createToLongWord(){
-        this.webTestClient.get().uri("/testentesten").exchange().expectStatus().is5xxServerError();
+        this.webTestClient
+                .get()
+                .uri("/testentesten")
+                .exchange()
+                .expectStatus()
+                .is5xxServerError();
     }
 
     @Test
     public void createToShortWord(){
-        this.webTestClient.get().uri("/test").exchange().expectStatus().is5xxServerError();
+        this.webTestClient
+                .get()
+                .uri("/test")
+                .exchange()
+                .expectStatus()
+                .is5xxServerError();
     }
 
     @Test
     public void createSpecialWord(){
-        this.webTestClient.get().uri("/t@st+n").exchange().expectStatus().is5xxServerError();
+        this.webTestClient
+                .get()
+                .uri("/t@st+n")
+                .exchange()
+                .expectStatus()
+                .is5xxServerError();
     }
 }
 
