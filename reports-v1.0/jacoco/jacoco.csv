@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+lingowords,com,Application,31,0,0,0,8,0,4,0,4,0
+lingowords,com.service,WordService,0,63,0,6,0,14,0,7,0,4
+lingowords,com.wordtarget,ApiWordTarget,69,0,6,0,11,0,6,0,3,0
+lingowords,com.wordsource,FileWordSource,0,36,0,2,0,9,0,3,0,2
+lingowords,com.commands,Command,16,0,0,0,6,0,3,0,3,0

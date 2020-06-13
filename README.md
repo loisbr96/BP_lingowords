@@ -20,6 +20,7 @@ parameters
 | filename | --file | to say witch file has to be uploaded|
 
 #Beoordeling
+
 ## Build tools en pipeline
 De applicatie gebruikt de **build tool** Maven. Daarnaast is er op Github Action een workflow aangemaakt die zorgt dat er een **pipeline** draait als er naar master wordt gepusht. **master** is altijd deploybaar.
 
