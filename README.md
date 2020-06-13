@@ -1,7 +1,7 @@
 LoLingo words application
 ======
 
-[![codecov](https://codecov.io/gh/loisbr96/BP_lingowords/branch/master/graph/badge.svg?token=RKCW4UUJVQ)](https://codecov.io/gh/loisbr96/BP_lingowords)
+![Build](https://github.com/loisbr96/BP_lingowords/workflows/Workflow/badge.svg) [![codecov](https://codecov.io/gh/loisbr96/BP_lingowords/branch/master/graph/badge.svg?token=RKCW4UUJVQ)](https://codecov.io/gh/loisbr96/BP_lingowords)
 
 Commands
 ------
