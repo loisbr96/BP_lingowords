@@ -1,8 +1,6 @@
-
 /*TODO The Springboot application doesn't fire up the test.
     The  console keeps stuck on 'Started CommandComponent2Test in 24.522 seconds*/
-/*
-package com.commands;
+/*package com.commands;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -21,7 +19,7 @@ public class CommandComponent2Test {
 
     @Test
     public void welcome(){
-        assertThat(command.welcome()).isEqualTo("hallo");
+        assertThat(command.welcome()).isEqualTo("welcome");
 
     }
 }*/
