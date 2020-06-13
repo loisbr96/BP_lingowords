@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@SuppressWarnings("PMD.UselessParentheses")
 public class ApiWordTarget implements WordTarget {
     @Value("${api.url}")
     private String apiUrl;
